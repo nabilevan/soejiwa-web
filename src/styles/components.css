@@ -1,0 +1,915 @@
+/* ============ Kartu ============ */
+.card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+/* ============ Tombol ============ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.btn--sm {
+  min-height: 36px;
+  padding: 0 14px;
+  font-size: 12px;
+}
+
+.btn--md {
+  min-height: 38px;
+  padding: 0 16px;
+  font-size: 13px;
+}
+
+.btn--lg {
+  min-height: 46px;
+  padding: 0 20px;
+  font-size: 14.5px;
+  border-radius: 12px;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn--primary {
+  background: var(--green);
+  color: var(--white);
+}
+
+.btn--primary:hover:not(:disabled) {
+  background: var(--green-hover);
+}
+
+.btn--secondary {
+  background: var(--white);
+  border-color: var(--line-strong);
+  color: var(--ink);
+}
+
+.btn--outline {
+  background: var(--white);
+  border-color: var(--line-strong);
+  color: var(--green-text);
+}
+
+.btn--outline-green {
+  background: var(--white);
+  border-color: var(--green);
+  color: var(--green-text);
+}
+
+.btn--secondary:hover:not(:disabled),
+.btn--outline:hover:not(:disabled),
+.btn--outline-green:hover:not(:disabled) {
+  background: var(--soft);
+}
+
+.btn--muted {
+  background: var(--soft);
+  color: var(--ink-2);
+}
+
+.btn--danger {
+  background: var(--red-soft);
+  color: var(--red);
+}
+
+.btn--danger:hover:not(:disabled) {
+  background: #f6d9da;
+}
+
+.btn:disabled:not(.btn--muted) {
+  opacity: 0.55;
+}
+
+/* ============ Tautan & tombol ikon ============ */
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green-text);
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  color: var(--ink-2);
+}
+
+.icon-btn:hover:not(:disabled) {
+  background: var(--soft);
+}
+
+.icon-btn:disabled {
+  color: var(--line-strong);
+}
+
+/* ============ Badge status ============ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: max-content;
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.badge .icon {
+  width: 13px;
+  height: 13px;
+}
+
+.badge--green {
+  background: var(--green-soft);
+  color: var(--green-text);
+}
+
+.badge--amber {
+  background: var(--amber-soft);
+  color: var(--amber);
+}
+
+.badge--red {
+  background: var(--red-soft);
+  color: var(--red);
+}
+
+.badge--blue {
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+
+.badge--neutral {
+  background: var(--soft);
+  color: var(--ink-2);
+}
+
+/* ============ Warna sif (chip & blok jadwal) ============ */
+.tone-pagi {
+  background: var(--shift-pagi);
+}
+
+.tone-siang {
+  background: var(--shift-siang);
+}
+
+.tone-malam {
+  background: var(--shift-malam);
+}
+
+.tone-libur {
+  background: var(--shift-libur);
+}
+
+.shift-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: max-content;
+  border-radius: 7px;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.shift-chip--sm {
+  padding: 2px 6px;
+  font-size: 11px;
+}
+
+.shift-chip--md {
+  padding: 4px 8px;
+  font-size: 12.5px;
+}
+
+.shift-chip--lg {
+  padding: 5px 9px;
+  font-size: 13.5px;
+}
+
+.shift-chip--md .icon,
+.shift-chip--sm .icon {
+  width: 13px;
+  height: 13px;
+}
+
+.shift-chip--lg .icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* ============ Avatar & orang ============ */
+.avatar {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  border-radius: 50%;
+  background: var(--green-soft);
+  color: var(--green-text);
+  font-weight: 700;
+}
+
+.avatar--sm {
+  width: 28px;
+  height: 28px;
+  font-size: 10.5px;
+}
+
+.avatar--md {
+  width: 30px;
+  height: 30px;
+  font-size: 11px;
+}
+
+.avatar--lg {
+  width: 34px;
+  height: 34px;
+  font-size: 12px;
+}
+
+.avatar-btn {
+  border-radius: 50%;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.person__text {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+}
+
+.person__name {
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.person__role {
+  font-size: 10.5px;
+  color: var(--muted);
+}
+
+/* ============ Logo teks ============ */
+.brand {
+  display: inline-grid;
+  line-height: 1;
+  color: var(--green);
+}
+
+.brand__kicker {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.34em;
+}
+
+.brand__name {
+  margin-top: 1px;
+  font-family: var(--font-serif);
+  font-size: 28px;
+}
+
+.brand--sm .brand__kicker {
+  font-size: 7.5px;
+}
+
+.brand--sm .brand__name {
+  font-size: 26px;
+}
+
+/* ============ Input form ============ */
+.field {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.field__label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.field__control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 12px;
+  background: var(--white);
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.field__control.is-large {
+  min-height: 47px;
+  padding: 0 12px;
+  border-radius: 12px;
+}
+
+.field__control:focus-within {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px var(--green-soft);
+}
+
+.field__control > .icon,
+.field__trailing {
+  display: inline-flex;
+  color: var(--ink-2);
+}
+
+.field__control input,
+.field__control select,
+.field__control textarea {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 14px;
+}
+
+.field__control input::placeholder,
+.field__control textarea::placeholder {
+  color: var(--ink-2);
+}
+
+.field__control select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.field__chevron {
+  pointer-events: none;
+}
+
+.field__control.is-error {
+  border-color: var(--red);
+}
+
+.field__control.is-error > .icon,
+.field__control.is-error .field__trailing {
+  color: var(--red);
+}
+
+.field__control.is-locked {
+  background: var(--soft);
+  color: var(--muted);
+}
+
+.field__control.is-locked > .icon {
+  color: var(--ink-2);
+}
+
+.field__control--textarea {
+  align-items: stretch;
+}
+
+.field__control textarea {
+  resize: vertical;
+  min-height: 56px;
+  line-height: 1.45;
+}
+
+.field__value {
+  flex: 1;
+  font-size: 14px;
+}
+
+/* Input tanggal/select tak terlihat yang menutupi kontrol buatan sendiri */
+.field__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.field__hint {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.field__control.is-error ~ .field__hint {
+  color: var(--red);
+}
+
+.field-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.fieldset legend {
+  margin-bottom: 6px;
+  padding: 0;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.label-row b {
+  font-size: 12.5px;
+}
+
+.label-row span {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.hint {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.checkbox input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  accent-color: var(--green);
+}
+
+/* ============ Pilihan bersegmen ============ */
+.segmented {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  padding: 3px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.segmented label {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 36px;
+  padding: 4px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-2);
+  text-align: center;
+  cursor: pointer;
+}
+
+.segmented input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.segmented label.is-selected {
+  border-color: var(--green);
+  background: var(--green-soft);
+  color: var(--green-text);
+  font-weight: 600;
+}
+
+.segmented label:has(input:focus-visible) {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+/* ============ Saklar ============ */
+.switch {
+  position: relative;
+  flex: none;
+  width: 44px;
+  height: 26px;
+}
+
+.switch input {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.switch__track {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: var(--line-strong);
+  transition: background-color 0.2s;
+}
+
+.switch__track::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+  transition: transform 0.2s;
+}
+
+.switch input:checked + .switch__track {
+  background: var(--green);
+}
+
+.switch input:checked + .switch__track::after {
+  transform: translateX(18px);
+}
+
+.switch input:focus-visible + .switch__track {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+/* ============ Catatan ============ */
+.note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.note > .icon {
+  width: 15px;
+  height: 15px;
+  margin-top: 1px;
+}
+
+.note__body {
+  flex: 1;
+}
+
+.note--soft,
+.note--green,
+.note--amber,
+.note--danger {
+  padding: 11px 12px;
+  border-radius: 10px;
+}
+
+.note--soft {
+  background: var(--soft);
+}
+
+.note--green {
+  background: var(--green-soft);
+  color: var(--green-text);
+}
+
+.note--strong {
+  font-weight: 600;
+}
+
+.note--amber {
+  background: var(--amber-soft);
+  color: var(--amber);
+}
+
+.note--danger {
+  background: var(--red-soft);
+  color: var(--red);
+}
+
+.note__close {
+  display: inline-grid;
+  place-items: center;
+  color: inherit;
+  opacity: 0.7;
+}
+
+.note__close:hover {
+  opacity: 1;
+}
+
+/* ============ Unggah berkas ============ */
+.upload,
+.file-card {
+  background: var(--white);
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+}
+
+.upload {
+  display: grid;
+  gap: 6px;
+  padding: 11px 13px;
+}
+
+.upload__file,
+.file-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.file-card {
+  align-items: center;
+  padding: 11px 13px;
+}
+
+.upload__file > .icon,
+.file-card > .icon {
+  color: var(--ink-2);
+}
+
+.upload__meta {
+  flex: 1;
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+}
+
+.upload__name {
+  font-size: 13.5px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.upload__info {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.upload__remove {
+  display: inline-flex;
+  color: var(--ink-2);
+}
+
+.upload__replace {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 8px;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.upload__replace label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--green-text);
+  cursor: pointer;
+}
+
+.dropzone {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 18px 14px;
+  border: 1.5px dashed var(--green-line);
+  border-radius: 12px;
+  background: var(--white);
+  color: var(--green-text);
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropzone:hover {
+  background: #fbfdfb;
+}
+
+.dropzone.is-error {
+  border-color: var(--red);
+}
+
+.dropzone b {
+  font-size: 13px;
+}
+
+.dropzone small {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.upload__error {
+  margin-top: 6px;
+  font-size: 11.5px;
+  color: var(--red);
+}
+
+/* ============ Modal ============ */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(15, 25, 19, 0.45);
+}
+
+.modal {
+  display: grid;
+  gap: 10px;
+  width: min(440px, 100%);
+  padding: 20px;
+}
+
+.modal__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.modal__body {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.modal__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding-top: 6px;
+}
+
+/* ============ Tabel ============ */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table--wide {
+  min-width: 860px;
+}
+
+.table th {
+  padding: 11px 20px;
+  background: var(--soft);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 13px 20px;
+  border-top: 1px solid var(--line);
+  font-size: 12.5px;
+  vertical-align: middle;
+}
+
+.table tr.is-muted td {
+  background: #fafbf8;
+}
+
+.table--clickable tbody tr {
+  cursor: pointer;
+}
+
+.table--clickable tbody tr:hover td {
+  background: #fafbf8;
+}
+
+.table--clickable tbody tr.is-selected td {
+  background: var(--green-soft);
+}
+
+.table--clickable tbody tr.is-selected td:first-child {
+  box-shadow: inset 2px 0 0 var(--green);
+}
+
+.cell-time {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cell-stack {
+  display: grid;
+  justify-items: start;
+  gap: 4px;
+}
+
+.cell-stack b {
+  font-weight: 500;
+}
+
+.cell-stack small {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.cell-action {
+  width: 48px;
+  text-align: right;
+}
+
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-top: 1px solid var(--line);
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+.pagination {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pagination b {
+  color: var(--green-text);
+}
+
+/* ============ Blok detail ============ */
+.detail-block {
+  display: grid;
+  gap: 6px;
+}
+
+.detail-block p {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.detail-label {
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.section-title {
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}

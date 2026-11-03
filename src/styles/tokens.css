@@ -1,0 +1,48 @@
+/* Token desain "Pustaka antarmuka SJW": Inter • sudut 12 px • ritme 8 px */
+:root {
+  /* Teks */
+  --ink: #17241c;
+  --ink-2: #34413a;
+  --muted: #66716b;
+
+  /* Permukaan & garis */
+  --paper: #f8f9f5;
+  --white: #ffffff;
+  --soft: #f1f3ef;
+  --line: #e2e6e0;
+  --line-strong: #d4dad3;
+
+  /* Hijau = aksi utama */
+  --green: #1e6340;
+  --green-hover: #174f33;
+  --green-text: #1d6942;
+  --green-soft: #e3efe6;
+  --green-line: #9dc3a9;
+
+  /* Merah = penanda penting & penolakan saja */
+  --red: #c4232e;
+  --red-soft: #fbe8e8;
+
+  /* Status lain */
+  --amber: #b26b05;
+  --amber-soft: #fcefd6;
+  --blue: #3556c9;
+  --blue-soft: #e7edfc;
+
+  /* Warna sif */
+  --shift-pagi: #e3efe6;
+  --shift-siang: #fbefd8;
+  --shift-malam: #e7edfc;
+  --shift-libur: #f0f1ed;
+
+  /* Bentuk */
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --shadow-frame: 0 18px 50px rgba(23, 36, 28, 0.12);
+
+  /* Huruf */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "DM Serif Display", Georgia, "Times New Roman", serif;
+}

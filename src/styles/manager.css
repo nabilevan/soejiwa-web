@@ -1,0 +1,680 @@
+/* ============ Halaman manajer ============ */
+
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.page-head h1 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.page-head p {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+.page-head__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ---------- Kartu angka ---------- */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.metric {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+}
+
+.metric__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+  color: var(--ink-2);
+}
+
+.metric__head .icon {
+  width: 18px;
+  height: 18px;
+  color: var(--green-text);
+}
+
+.metric__value {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.metric__caption {
+  font-size: 11.5px;
+  color: var(--ink-2);
+}
+
+/* ---------- Panel ---------- */
+.panel {
+  overflow: hidden;
+}
+
+.panel__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+}
+
+.panel__title {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.panel__foot {
+  padding: 14px 20px;
+  border-top: 1px solid var(--line);
+  font-size: 10.5px;
+}
+
+/* ---------- Ringkasan ---------- */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.9fr) minmax(280px, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.reviews {
+  padding: 0 20px 8px;
+}
+
+.review {
+  display: grid;
+  gap: 10px;
+  padding: 0 0 16px;
+}
+
+.review + .review {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.review__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.review__title {
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.review__text {
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+.review__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 10.5px;
+  color: var(--ink-2);
+}
+
+.callout {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 22px;
+  border-radius: var(--radius);
+  background: var(--green-soft);
+  color: var(--green-text);
+}
+
+.callout > .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.callout__body {
+  flex: 1;
+  display: grid;
+  gap: 4px;
+}
+
+.callout__body b {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.callout__body span {
+  font-size: 12.5px;
+  color: var(--ink-2);
+}
+
+/* ---------- Jadwal pegawai ---------- */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.toolbar__label {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.toolbar__spacer {
+  flex: 1;
+}
+
+.toolbar__meta {
+  font-size: 11.5px;
+  color: var(--ink-2);
+}
+
+.schedule-board {
+  overflow-x: auto;
+}
+
+.schedule-board table {
+  width: 100%;
+  min-width: 1000px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.schedule-board__person-col {
+  width: 184px;
+}
+
+.schedule-board thead th {
+  padding: 14px 8px;
+  border-left: 1px solid var(--line);
+  background: var(--soft);
+  text-align: center;
+  font-weight: 500;
+}
+
+.schedule-board thead th.schedule-board__corner {
+  padding-left: 16px;
+  border-left: 0;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.schedule-board thead th.is-today {
+  background: var(--green-soft);
+  color: var(--green-text);
+}
+
+.schedule-board__day {
+  display: block;
+  font-size: 11.5px;
+}
+
+.schedule-board__date {
+  display: block;
+  margin-top: 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.schedule-board tbody th {
+  padding: 14px 16px;
+  border-top: 1px solid var(--line);
+  text-align: left;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.schedule-board tbody td {
+  padding: 13px 7px 10px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.schedule-board tbody td.is-today {
+  background: #f6faf6;
+}
+
+.workload {
+  display: block;
+  margin-top: 10px;
+  font-size: 10.5px;
+  color: var(--ink-2);
+}
+
+.shift-block {
+  display: grid;
+  gap: 4px;
+  padding: 8px 9px;
+  border-radius: 8px;
+}
+
+.shift-block__name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.shift-block__name .icon {
+  width: 13px;
+  height: 13px;
+}
+
+.shift-block__time {
+  font-size: 11px;
+  color: var(--ink-2);
+}
+
+.cell-note {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 9px;
+  font-size: 10px;
+  color: var(--ink-2);
+}
+
+.cell-note .icon {
+  width: 10px;
+  height: 10px;
+}
+
+.cell-note--pending {
+  font-weight: 600;
+  color: var(--amber);
+}
+
+.cell-note--approved {
+  font-weight: 600;
+  color: var(--green-text);
+}
+
+.legend-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.legend {
+  display: grid;
+  gap: 12px;
+}
+
+.legend b,
+.legend-aside b {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.legend__items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 20px;
+}
+
+.legend__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10.5px;
+  color: var(--ink-2);
+}
+
+.legend-aside {
+  display: grid;
+  gap: 6px;
+  max-width: 320px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+
+.legend-aside small {
+  font-size: 10px;
+}
+
+/* ---------- Rekap absensi ---------- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.filter-select {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: var(--green-text);
+}
+
+.filter-select .icon {
+  position: absolute;
+  left: 16px;
+  width: 15px;
+  height: 15px;
+  pointer-events: none;
+}
+
+.filter-select select {
+  appearance: none;
+  min-height: 47px;
+  padding: 0 18px 0 40px;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: var(--white);
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--green-text);
+  cursor: pointer;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 240px;
+  min-height: 47px;
+  margin-left: auto;
+  padding: 0 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: var(--white);
+  color: var(--ink-2);
+}
+
+.search-box input,
+.table-search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 13px;
+}
+
+.search-box .icon,
+.table-search .icon {
+  width: 17px;
+  height: 17px;
+}
+
+.foot-note {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 10.5px;
+  color: var(--ink-2);
+}
+
+.foot-note .note {
+  font-size: 11.5px;
+}
+
+/* ---------- Permohonan izin ---------- */
+.urgent-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--ink-2);
+}
+
+.tabs-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: -6px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: var(--white);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--green-text);
+}
+
+.tab.is-active {
+  border-color: var(--green);
+  background: var(--green);
+  color: var(--white);
+}
+
+.tabs-row .btn--lg {
+  min-height: 36px;
+  font-size: 12.5px;
+  border-radius: 10px;
+}
+
+.requests-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(300px, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.table-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 58px;
+  padding: 0 16px;
+  color: var(--ink-2);
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+}
+
+.detail__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail__head h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.detail__person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.detail__person .person__name {
+  font-size: 13.5px;
+}
+
+.detail__meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.detail__meta dt {
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.detail__meta dd {
+  margin-top: 4px;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.reason-box {
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--soft);
+  font-size: 12.5px;
+  color: var(--ink) !important;
+}
+
+.impact {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--green-soft);
+  color: var(--green-text);
+}
+
+.impact b {
+  font-size: 11.5px;
+  font-weight: 500;
+}
+
+.impact span {
+  font-size: 10.5px;
+}
+
+.detail__time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10.5px;
+  color: var(--ink-2);
+}
+
+.detail__time .icon {
+  width: 14px;
+  height: 14px;
+}
+
+.detail__footer {
+  display: grid;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.detail__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.detail__note {
+  font-size: 10.5px;
+  text-align: center;
+  color: var(--ink-2);
+}
+
+.detail--empty {
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ---------- Responsif ---------- */
+@media (max-width: 1200px) {
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-grid,
+  .requests-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .page-head h1 {
+    font-size: 24px;
+  }
+
+  .metric {
+    padding: 16px;
+  }
+
+  .metric__value {
+    font-size: 22px;
+  }
+
+  .callout {
+    flex-wrap: wrap;
+  }
+
+  .search-box {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+  }
+
+  .toolbar__spacer {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .metrics {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .metric__value {
+    font-size: 18px;
+  }
+}
